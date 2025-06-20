@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HELIOS by ÖMÜR BUĞRA GÜNDÜZ</title>
+
+  <!-- three.js (Vanta için) -->
+  <script src="https://unpkg.com/three@0.134.0/build/three.min.js"></script>
+  <!-- Vanta.js Waves efekti -->
+  <script src="https://unpkg.com/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+<body>
+<!-- Vanta efektinin uygulanacağı konteyner -->
+<div id="vanta-bg" class="relative h-screen w-screen overflow-hidden">
+  <!-- React uygulaması buraya render edilecek -->
+  <div id="root"></div>
+</div>
+
+<!-- Vanta başlatma kodu -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    VANTA.WAVES({
+      el: '#vanta-bg',
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0xf6e02,
+      shininess: 77.0,
+      waveHeight: 23.0,
+      waveSpeed: 1.65,
+      zoom: 0.65
+    });
+  });
+</script>
+
+<!-- Vite giriş noktası -->
+<script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
