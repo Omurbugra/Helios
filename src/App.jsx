@@ -96,7 +96,7 @@ export default function App() {
                 {/* Documentation Butonu */}
                 <div className="mt-6">
                     <a
-                        href="https://documentation.example.com"
+                        href="https://docs.google.com/document/d/1wMcuWDc8ZzWqaEL9ooeCUWgUVFF_28LKQ9a37EJbnCQ/edit?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="py-2 px-6 bg-white bg-opacity-10 rounded-lg hover:bg-blue-500 transition font-medium shadow-md"
