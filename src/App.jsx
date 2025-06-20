@@ -51,19 +51,30 @@ export default function App() {
 
                 {/* HELIOS Logo-like Title */}
                 <div className="mb-10 text-center">
-                    <h1 className="text-7xl font-extrabold tracking-widest text-white drop-shadow-lg">HELIOS</h1>
-                    <p className="text-xl font-medium text-white mt-2">Ömür Buğra Gündüz</p>
+                    <h1
+                        className="font-extrabold tracking-widest text-white drop-shadow-lg"
+                        style={{ fontSize: '56px' }}
+                    >
+                        HELIOS
+                    </h1>
+                    <p
+                        className="font-medium text-white mt-2"
+                        style={{ fontSize: '18px' }}
+                    >
+                        Ömür Buğra Gündüz
+                    </p>
                 </div>
 
                 {/* Navigation Tabs */}
-                <nav className="flex space-x-6 mt-16 mb-6">
+                <nav className="flex space-x-6 mt-10 mb-6">
                     {tabs.map((tab, i) => (
                         <a
                             key={i}
                             href={tab.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-2 px-6 bg-green-600 bg-opacity-90 rounded-lg hover:bg-green-500 transition text-lg font-medium shadow-md"
+                            className="py-2 px-6 bg-green-600 bg-opacity-90 rounded-lg hover:bg-green-500 transition font-medium shadow-md"
+                            style={{ fontSize: '16px' }}
                         >
                             {tab.title}
                         </a>
@@ -71,17 +82,21 @@ export default function App() {
                 </nav>
 
                 {/* Description Paragraph */}
-                <div className="max-w-5xl text-lg leading-relaxed text-center mt-10 mb-0">
+                <div
+                    className="max-w-5xl leading-relaxed text-center mt-5 mb-0"
+                    style={{ fontSize: '16px' }}
+                >
                     The Sustainability Dashboard is a three-part web application designed to support different users in making informed, energy-conscious decisions throughout the building lifecycle. The Energy+ Parametric Dashboard enables architects, engineers, and researchers to analyze complex building simulations, exploring the relationships between design variables and metrics. Residential Design Insights Dashboard helps homeowners and consultants compare design strategies—such as façade options or PV layouts—by visualizing energy outcomes and calculating cost impacts. The Smart Use Guidance Dashboard empowers residents with real-time, personalized recommendations to optimize energy use, reduce bills, and increase self-sufficiency.
                 </div>
 
                 {/* Documentation Button (new) */}
-                <div className="mt-10">
+                <div className="mt-5">
                     <a
                         href="https://documentation.example.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-2 px-6 bg-white bg-opacity-10 rounded-lg hover:bg-blue-500 transition text-lg font-medium shadow-md"
+                        className="py-2 px-6 bg-white bg-opacity-10 rounded-lg hover:bg-blue-500 transition font-medium shadow-md"
+                        style={{ fontSize: '16px' }}
                     >
                         Documentation
                     </a>
