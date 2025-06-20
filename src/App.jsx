@@ -36,37 +36,41 @@ export default function App() {
     ];
 
     return (
-        <div className="relative h-screen w-screen overflow-hidden">
+        <div className="relative min-h-screen w-screen overflow-x-hidden overflow-y-auto">
 
-            {/* 3D Canvas Background */}
+            {/* 3D arka plan */}
             <Canvas className="absolute inset-0 z-0">
                 <BackgroundNodes />
             </Canvas>
 
-            {/* Semi-transparent overlay */}
+            {/* Karanlık şeffaf overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-10 z-10 pointer-events-none" />
 
-            {/* Main content centered */}
-            <main className="absolute inset-0 flex flex-col items-center z-20 text-white px-6 pt-44">
+            {/* Ana içerik */}
+            <main
+                className="relative flex flex-col items-center justify-center text-white z-20 px-6 py-10"
+                style={{
+                    textAlign: 'center',
+                }}
+            >
+                {/* HELIOS Başlık */}
+                <h1
+                    className="font-extrabold tracking-widest drop-shadow-lg"
+                    style={{ fontSize: '56px' }}
+                >
+                    HELIOS
+                </h1>
 
-                {/* HELIOS Logo-like Title */}
-                <div className="mb-10 text-center">
-                    <h1
-                        className="font-extrabold tracking-widest text-white drop-shadow-lg"
-                        style={{ fontSize: '56px' }}
-                    >
-                        HELIOS
-                    </h1>
-                    <p
-                        className="font-medium text-white mt-2"
-                        style={{ fontSize: '18px' }}
-                    >
-                        Ömür Buğra Gündüz
-                    </p>
-                </div>
+                {/* Alt İsim */}
+                <p
+                    className="font-medium mt-2"
+                    style={{ fontSize: '18px' }}
+                >
+                    Ömür Buğra Gündüz
+                </p>
 
-                {/* Navigation Tabs */}
-                <nav className="flex space-x-6 mt-10 mb-6">
+                {/* Link Butonları */}
+                <div className="flex flex-wrap justify-center gap-4 mt-10">
                     {tabs.map((tab, i) => (
                         <a
                             key={i}
@@ -79,18 +83,18 @@ export default function App() {
                             {tab.title}
                         </a>
                     ))}
-                </nav>
+                </div>
 
-                {/* Description Paragraph */}
+                {/* Açıklama */}
                 <div
-                    className="max-w-5xl leading-relaxed text-center mt-5 mb-0"
-                    style={{ fontSize: '16px' }}
+                    className="max-w-4xl mt-6"
+                    style={{ fontSize: '16px', lineHeight: '1.6' }}
                 >
                     The Sustainability Dashboard is a three-part web application designed to support different users in making informed, energy-conscious decisions throughout the building lifecycle. The Energy+ Parametric Dashboard enables architects, engineers, and researchers to analyze complex building simulations, exploring the relationships between design variables and metrics. Residential Design Insights Dashboard helps homeowners and consultants compare design strategies—such as façade options or PV layouts—by visualizing energy outcomes and calculating cost impacts. The Smart Use Guidance Dashboard empowers residents with real-time, personalized recommendations to optimize energy use, reduce bills, and increase self-sufficiency.
                 </div>
 
-                {/* Documentation Button (new) */}
-                <div className="mt-5">
+                {/* Documentation Butonu */}
+                <div className="mt-6">
                     <a
                         href="https://documentation.example.com"
                         target="_blank"
